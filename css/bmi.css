@@ -64,6 +64,12 @@ body { background-color: #0f0f0f; }
 .bmi-bar.overweight  { background: #fbbf24; }
 .bmi-bar.obese       { background: #ff2b2b; }
 /* Scale */
+/* text */
+.scale-item.underweight strong { color: #5aabff; }
+.scale-item.normal      strong { color: #4ade80; }
+.scale-item.overweight  strong { color: #fbbf24; }
+.scale-item.obese       strong { color: #ff2b2b; }
+/* border */
 .scale-item { background: #0f0f0f; }
 .scale-item.underweight { border: 1px solid #2a4a6b; }
 .scale-item.normal      { border: 1px solid #1a4a2a; }
