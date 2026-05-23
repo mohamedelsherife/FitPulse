@@ -3,8 +3,6 @@ function loadComponent(id, file) {
     .then(response => response.text())
     .then(html => {
       document.getElementById(id).innerHTML = html;
-
-      // بعد تحميل الهيدر، لوّن الرابط الحالي
       if (id === 'header') {
         highlightActiveLink();
       }
@@ -22,6 +20,5 @@ function highlightActiveLink() {
   });
 }
 
-// تحميل الهيدر والفوتر تلقائياً
 loadComponent('header', 'components/header.html');
 loadComponent('footer', 'components/footer.html');
