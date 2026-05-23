@@ -52,11 +52,17 @@ body { background-color: #0f0f0f; }
 }
 
 /* Colors */
-.bmi-number.underweight, .bmi-bar.underweight { color: #5aabff; background: #5aabff; }
-.bmi-number.normal,      .bmi-bar.normal      { color: #4ade80; background: #4ade80; }
-.bmi-number.overweight,  .bmi-bar.overweight  { color: #fbbf24; background: #fbbf24; }
-.bmi-number.obese,       .bmi-bar.obese       { color: #ff2b2b; background: #ff2b2b; }
+/* الأرقام — فقط لون النص */
+.bmi-number.underweight { color: #5aabff; }
+.bmi-number.normal      { color: #4ade80; }
+.bmi-number.overweight  { color: #fbbf24; }
+.bmi-number.obese       { color: #ff2b2b; }
 
+/* الشريط — فقط لون الخلفية */
+.bmi-bar.underweight { background: #5aabff; }
+.bmi-bar.normal      { background: #4ade80; }
+.bmi-bar.overweight  { background: #fbbf24; }
+.bmi-bar.obese       { background: #ff2b2b; }
 /* Scale */
 .scale-item { background: #0f0f0f; }
 .scale-item.underweight { border: 1px solid #2a4a6b; }
