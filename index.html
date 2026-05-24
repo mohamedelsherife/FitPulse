@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vortex Fitness - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <!-- ── HERO ── -->
+    <section class="hero-section d-flex align-items-center justify-content-center text-center">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content position-relative">
+            <h1 class="display-2 fw-black text-white mb-3">WELCOME TO <span class="text-vortex">VORTEX</span></h1>
+            <p class="lead mb-4 text-gray">Defy your limits. Forge the strongest version of yourself today.</p>
+            <a href="#programs" class="btn btn-vortex btn-lg px-5 py-3 fw-bold">EXPLORE PROGRAMS</a>
+        </div>
+    </section>
+
+    <!-- ── FEATURED PROGRAMS ── -->
+    <section id="programs" class="py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5 text-white">FEATURED <span class="text-vortex">PROGRAMS</span></h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card vortex-card h-100 border-0 text-white">
+                        <div class="card-body p-4 text-center">
+                            <div class="vortex-icon mb-3"><i class="bi bi-trophy-fill"></i></div>
+                            <h3 class="card-title h5 fw-bold mb-3">Bodybuilding</h3>
+                            <p class="card-text text-gray">Intense weight training designed to build muscle, definition, and raw physical power with expert guidance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card vortex-card h-100 border-0 text-white">
+                        <div class="card-body p-4 text-center">
+                            <div class="vortex-icon mb-3"><i class="bi bi-lightning-charge-fill"></i></div>
+                            <h3 class="card-title h5 fw-bold mb-3">Cardio & Fitness</h3>
+                            <p class="card-text text-gray">Boost your endurance, torch calories, and elevate your energy levels in high-octane workout sessions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card vortex-card h-100 border-0 text-white">
+                        <div class="card-body p-4 text-center">
+                            <div class="vortex-icon mb-3"><i class="bi bi-heart-pulse-fill"></i></div>
+                            <h3 class="card-title h5 fw-bold mb-3">Yoga & Flexibility</h3>
+                            <p class="card-text text-gray">Achieve the perfect balance of mind and body while improving core strength, flexibility, and mobility.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── TRACK YOUR PROGRESS SECTION ── -->
+    <section class="py-5" id="stats-section">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-2 text-white">TRACK YOUR <span class="text-vortex">PROGRESS</span></h2>
+            <p class="text-center text-gray mb-5">REAL DATA · REAL RESULTS</p>
+
+            <!-- Gender Toggle for Stats -->
+            <div class="gender-tabs-wrapper d-flex justify-content-center gap-3 mb-5">
+                <div class="gender-tab active" id="statTabMale" onclick="switchStatGender('male')">
+                    <span class="gender-tab-icon"><i class="bi bi-gender-male"></i></span>
+                    <span class="gender-tab-label">MALE</span>
+                </div>
+                <div class="gender-tab" id="statTabFemale" onclick="switchStatGender('female')">
+                    <span class="gender-tab-icon"><i class="bi bi-gender-female"></i></span>
+                    <span class="gender-tab-label">FEMALE</span>
+                </div>
+            </div>
+
+            <!-- Stat KPI Cards -->
+            <div class="row g-3 mb-5" id="kpiCards">
+                <div class="col-6 col-md-3">
+                    <div class="kpi-card text-center">
+                        <div class="kpi-icon"><i class="bi bi-people-fill"></i></div>
+                        <div class="kpi-value" id="kpiMembers">1,284</div>
+                        <div class="kpi-label">MEMBERS</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="kpi-card text-center">
+                        <div class="kpi-icon"><i class="bi bi-fire"></i></div>
+                        <div class="kpi-value" id="kpiCal">620</div>
+                        <div class="kpi-label">AVG CAL/DAY</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="kpi-card text-center">
+                        <div class="kpi-icon"><i class="bi bi-clock-fill"></i></div>
+                        <div class="kpi-value" id="kpiSession">68m</div>
+                        <div class="kpi-label">AVG SESSION</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="kpi-card text-center">
+                        <div class="kpi-icon"><i class="bi bi-trophy-fill"></i></div>
+                        <div class="kpi-value" id="kpiGoal">89%</div>
+                        <div class="kpi-label">GOAL RATE</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Row: Weekly Calories + Muscle Focus -->
+            <div class="row g-4 mb-5">
+                <!-- Weekly Calories Chart -->
+                <div class="col-md-6">
+                    <div class="vortex-card p-4">
+                        <div class="d-flex align-items-center gap-2 mb-4">
+                            <i class="bi bi-bar-chart-fill text-vortex"></i>
+                            <span class="fw-bold text-white small letter-spacing-wide">WEEKLY CALORIES</span>
+                            <span class="ms-2 text-gray small">· GOAL 500</span>
+                        </div>
+                        <div class="chart-box" style="height:220px;">
+                            <canvas id="calChart" role="img" aria-label="Weekly calories chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <!-- Muscle Focus Radar -->
+                <div class="col-md-6">
+                    <div class="vortex-card p-4">
+                        <div class="d-flex align-items-center gap-2 mb-4">
+                            <i class="bi bi-activity text-vortex"></i>
+                            <span class="fw-bold text-white small letter-spacing-wide">MUSCLE FOCUS</span>
+                        </div>
+                        <div class="chart-box" style="height:220px;">
+                            <canvas id="muscleChart" role="img" aria-label="Muscle focus radar chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Program Popularity -->
+            <div class="vortex-card p-4 mb-4">
+                <div class="d-flex align-items-center gap-2 mb-4">
+                    <i class="bi bi-graph-up-arrow text-vortex"></i>
+                    <span class="fw-bold text-white small letter-spacing-wide">PROGRAM POPULARITY</span>
+                </div>
+                <div class="popularity-list" id="popularityList">
+                    <div class="popularity-row">
+                        <span class="popularity-label">Bodybuilding</span>
+                        <div class="popularity-bar-track">
+                            <div class="popularity-bar-fill" style="width:88%"></div>
+                        </div>
+                        <span class="popularity-pct text-vortex fw-bold">88%</span>
+                    </div>
+                    <div class="popularity-row">
+                        <span class="popularity-label">Combat Training</span>
+                        <div class="popularity-bar-track">
+                            <div class="popularity-bar-fill" style="width:72%"></div>
+                        </div>
+                        <span class="popularity-pct text-vortex fw-bold">72%</span>
+                    </div>
+                    <div class="popularity-row">
+                        <span class="popularity-label">Cardio Blast</span>
+                        <div class="popularity-bar-track">
+                            <div class="popularity-bar-fill" style="width:61%"></div>
+                        </div>
+                        <span class="popularity-pct text-vortex fw-bold">61%</span>
+                    </div>
+                    <div class="popularity-row">
+                        <span class="popularity-label">Swim &amp; Stretch</span>
+                        <div class="popularity-bar-track">
+                            <div class="popularity-bar-fill" style="width:38%"></div>
+                        </div>
+                        <span class="popularity-pct text-vortex fw-bold">38%</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ── TESTIMONIALS ── -->
+    <section class="py-5 bg-vortex-dark">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5 text-white">WHAT OUR <span class="text-vortex">CHAMPIONS SAY</span></h2>
+            <div class="row g-4">
+                <div class="col-md-6 mx-auto">
+                    <div class="testimonial-box p-4 rounded text-center">
+                        <i class="bi bi-quote text-vortex fs-2 mb-3 d-block"></i>
+                        <p class="fst-italic text-gray">"Joining Vortex completely transformed my lifestyle. The environment is incredibly motivating, and the trainers push you to safely smash your goals every single day!"</p>
+                        <h5 class="text-vortex fw-bold mb-0 mt-3">— Alex Johnson</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>

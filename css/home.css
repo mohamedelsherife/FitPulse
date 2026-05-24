@@ -1,0 +1,212 @@
+/* =============================================
+   VORTEX FITNESS — home.css
+   ============================================= */
+
+:root {
+    --vortex-bg: #0f0f0f;
+    --vortex-accent: #ff2b2b;
+    --vortex-text-white: #ffffff;
+    --vortex-text-gray: #b3b3b3;
+}
+
+body {
+    font-family: 'Montserrat', 'Inter', sans-serif;
+    background-color: var(--vortex-bg);
+    color: var(--vortex-text-white);
+    overflow-x: hidden;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.text-vortex  { color: var(--vortex-accent) !important; }
+.text-gray    { color: var(--vortex-text-gray); }
+.bg-vortex-dark { background-color: #080808; }
+.fw-black     { font-weight: 900; }
+.letter-spacing-wide { letter-spacing: 1.5px; }
+
+/* ── 1. HERO ── */
+.hero-section {
+    position: relative;
+    height: 80vh;
+    background: url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1920')
+                no-repeat center center / cover;
+}
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 15, 15, 0.85);
+}
+
+/* ── 2. BUTTONS ── */
+.btn-vortex {
+    background-color: var(--vortex-accent);
+    color: var(--vortex-text-white);
+    border: none;
+    transition: all 0.3s ease;
+}
+.btn-vortex:hover {
+    background-color: #cc1e1e;
+    color: var(--vortex-text-white);
+    transform: scale(1.05);
+}
+.btn-outline-vortex {
+    color: var(--vortex-accent);
+    border: 2px solid var(--vortex-accent);
+    background: transparent;
+    transition: all 0.3s ease;
+}
+.btn-outline-vortex:hover {
+    background-color: var(--vortex-accent);
+    color: var(--vortex-text-white);
+}
+
+/* ── 3. PROGRAM CARDS ── */
+.vortex-card {
+    background-color: #161616;
+    border-radius: 12px;
+    border-top: 3px solid transparent !important;
+    transition: all 0.3s ease;
+}
+.vortex-card:hover {
+    transform: translateY(-8px);
+    border-top: 3px solid var(--vortex-accent) !important;
+    box-shadow: 0 10px 20px rgba(255, 43, 43, 0.12);
+}
+.vortex-icon {
+    font-size: 2.2rem;
+    color: var(--vortex-accent);
+    line-height: 1;
+}
+.vortex-badge {
+    background: rgba(255, 43, 43, 0.15);
+    color: var(--vortex-accent);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    padding: 2px 10px;
+}
+
+/* ── 4. GENDER TABS (Stats Section) ── */
+.gender-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 1rem 2.5rem;
+    background: #161616;
+    border: 2px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: border-color 0.25s, transform 0.2s, box-shadow 0.25s;
+    color: var(--vortex-text-gray);
+    min-width: 140px;
+}
+.gender-tab:hover {
+    border-color: rgba(255, 43, 43, 0.5);
+    color: #fff;
+}
+.gender-tab.active {
+    border-color: var(--vortex-accent);
+    color: #fff;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(255, 43, 43, 0.18);
+}
+.gender-tab-icon {
+    font-size: 1.6rem;
+    line-height: 1;
+}
+.gender-tab-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Gender content panels */
+.gender-content { display: none; }
+.gender-content.show {
+    display: block;
+    animation: vxFadeIn 0.35s ease;
+}
+
+/* ── 5. KPI CARDS ── */
+.kpi-card {
+    background: #161616;
+    border-radius: 12px;
+    border: 2px solid rgba(255,255,255,0.06);
+    padding: 1.4rem 1rem;
+    transition: border-color 0.25s, transform 0.2s;
+}
+.kpi-card:hover {
+    border-color: var(--vortex-accent);
+    transform: translateY(-4px);
+}
+.kpi-icon {
+    font-size: 1.6rem;
+    color: var(--vortex-accent);
+    margin-bottom: 0.5rem;
+}
+.kpi-value {
+    font-size: 1.9rem;
+    font-weight: 900;
+    color: var(--vortex-text-white);
+    line-height: 1.1;
+    margin-bottom: 4px;
+}
+.kpi-label {
+    font-size: 0.7rem;
+    color: var(--vortex-text-gray);
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+/* ── 6. CHART CARDS ── */
+.chart-box {
+    position: relative;
+    width: 100%;
+}
+
+/* ── 7. PROGRAM POPULARITY BARS ── */
+.popularity-list { display: flex; flex-direction: column; gap: 1rem; }
+.popularity-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.popularity-label {
+    font-size: 0.82rem;
+    color: var(--vortex-text-gray);
+    min-width: 130px;
+    font-weight: 600;
+}
+.popularity-bar-track {
+    flex: 1;
+    background: rgba(255,255,255,0.06);
+    border-radius: 4px;
+    height: 8px;
+    overflow: hidden;
+}
+.popularity-bar-fill {
+    height: 100%;
+    background: var(--vortex-accent);
+    border-radius: 4px;
+    transition: width 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.popularity-pct {
+    font-size: 0.82rem;
+    min-width: 38px;
+    text-align: right;
+}
+
+/* ── 8. TESTIMONIALS ── */
+.testimonial-box {
+    background-color: #161616;
+    border-left: 4px solid var(--vortex-accent);
+}
+
+/* ── 9. ANIMATION ── */
+@keyframes vxFadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+
