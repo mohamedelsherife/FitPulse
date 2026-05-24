@@ -1,0 +1,544 @@
+/* =============================================
+   VORTEX FITNESS — global.css
+   ملف CSS العام للمشروع كله
+   يُضاف في كل صفحة قبل أي CSS خاص بالصفحة
+
+   الترتيب في الـ <head>:
+   1. Bootstrap CSS
+   2. Google Fonts
+   3. Bootstrap Icons
+   4. global.css  ← هذا الملف
+   5. page-specific CSS  (مثل home.css, about.css ...)
+   ============================================= */
+
+
+/* ══════════════════════════════════════════════
+   1. CSS VARIABLES  —  ألوان وخطوط المشروع
+   ══════════════════════════════════════════════ */
+:root {
+    /* الألوان الأساسية */
+    --vortex-bg:          #0f0f0f;   /* خلفية الصفحات */
+    --vortex-bg-dark:     #080808;   /* خلفية أغمق للسكشنز */
+    --vortex-bg-card:     #161616;   /* خلفية الكاردز */
+    --vortex-accent:      #ff2b2b;   /* اللون الأحمر الرئيسي */
+    --vortex-accent-dark: #cc1e1e;   /* أحمر أغمق للـ hover */
+
+    /* النصوص */
+    --vortex-text-white:  #ffffff;
+    --vortex-text-gray:   #b3b3b3;
+    --vortex-text-muted:  #666666;
+
+    /* الحدود */
+    --vortex-border:      rgba(255, 255, 255, 0.08);
+    --vortex-border-accent: rgba(255, 43, 43, 0.5);
+
+    /* الخطوط */
+    --vortex-font-main:   'Montserrat', 'Inter', sans-serif;
+
+    /* الظلال */
+    --vortex-shadow-card: 0 10px 20px rgba(255, 43, 43, 0.12);
+    --vortex-shadow-glow: 0 6px 20px rgba(255, 43, 43, 0.18);
+
+    /* الـ border-radius */
+    --vortex-radius:      12px;
+    --vortex-radius-sm:   6px;
+
+    /* الـ transition */
+    --vortex-transition:  all 0.3s ease;
+}
+
+
+/* ══════════════════════════════════════════════
+   2. RESET & BASE
+   ══════════════════════════════════════════════ */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--vortex-font-main);
+    background-color: var(--vortex-bg);
+    color: var(--vortex-text-white);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: var(--vortex-accent);
+    text-decoration: none;
+    transition: var(--vortex-transition);
+}
+a:hover {
+    color: var(--vortex-accent-dark);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* ══════════════════════════════════════════════
+   3. UTILITY CLASSES  —  كلاسات مساعدة
+   ══════════════════════════════════════════════ */
+
+/* الألوان */
+.text-vortex        { color: var(--vortex-accent) !important; }
+.text-gray          { color: var(--vortex-text-gray); }
+.text-muted-vortex  { color: var(--vortex-text-muted); }
+
+/* الخلفيات */
+.bg-vortex          { background-color: var(--vortex-bg); }
+.bg-vortex-dark     { background-color: var(--vortex-bg-dark); }
+.bg-vortex-card     { background-color: var(--vortex-bg-card); }
+
+/* الخطوط */
+.fw-black           { font-weight: 900; }
+.fw-heavy           { font-weight: 800; }
+
+/* المسافات */
+.letter-spacing-wide  { letter-spacing: 1.5px; }
+.letter-spacing-wider { letter-spacing: 2.5px; }
+
+/* الحدود */
+.border-vortex      { border-color: var(--vortex-accent) !important; }
+
+
+/* ══════════════════════════════════════════════
+   4. BUTTONS  —  الأزرار
+   ══════════════════════════════════════════════ */
+
+/* زر أحمر مملوء */
+.btn-vortex {
+    background-color: var(--vortex-accent);
+    color: var(--vortex-text-white);
+    border: none;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: var(--vortex-transition);
+}
+.btn-vortex:hover,
+.btn-vortex:focus {
+    background-color: var(--vortex-accent-dark);
+    color: var(--vortex-text-white);
+    transform: scale(1.05);
+    box-shadow: var(--vortex-shadow-glow);
+}
+
+/* زر بإطار أحمر */
+.btn-outline-vortex {
+    color: var(--vortex-accent);
+    border: 2px solid var(--vortex-accent);
+    background: transparent;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: var(--vortex-transition);
+}
+.btn-outline-vortex:hover,
+.btn-outline-vortex:focus {
+    background-color: var(--vortex-accent);
+    color: var(--vortex-text-white);
+    box-shadow: var(--vortex-shadow-glow);
+}
+
+/* زر شفاف */
+.btn-ghost-vortex {
+    color: var(--vortex-text-gray);
+    border: 2px solid var(--vortex-border);
+    background: transparent;
+    font-weight: 600;
+    transition: var(--vortex-transition);
+}
+.btn-ghost-vortex:hover {
+    border-color: var(--vortex-border-accent);
+    color: var(--vortex-text-white);
+}
+
+
+/* ══════════════════════════════════════════════
+   5. CARDS  —  الكاردز
+   ══════════════════════════════════════════════ */
+.vortex-card {
+    background-color: var(--vortex-bg-card);
+    border-radius: var(--vortex-radius);
+    border-top: 3px solid transparent !important;
+    transition: var(--vortex-transition);
+}
+.vortex-card:hover {
+    transform: translateY(-8px);
+    border-top: 3px solid var(--vortex-accent) !important;
+    box-shadow: var(--vortex-shadow-card);
+}
+
+/* أيقونة الكارد */
+.vortex-icon {
+    font-size: 2.2rem;
+    color: var(--vortex-accent);
+    line-height: 1;
+}
+
+/* بادج الكارد */
+.vortex-badge {
+    display: inline-block;
+    background: rgba(255, 43, 43, 0.15);
+    color: var(--vortex-accent);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: var(--vortex-radius-sm);
+    padding: 2px 10px;
+}
+
+/* KPI Card */
+.kpi-card {
+    background: var(--vortex-bg-card);
+    border-radius: var(--vortex-radius);
+    border: 2px solid rgba(255, 255, 255, 0.06);
+    padding: 1.4rem 1rem;
+    transition: border-color 0.25s, transform 0.2s;
+}
+.kpi-card:hover {
+    border-color: var(--vortex-accent);
+    transform: translateY(-4px);
+}
+.kpi-icon {
+    font-size: 1.6rem;
+    color: var(--vortex-accent);
+    margin-bottom: 0.5rem;
+}
+.kpi-value {
+    font-size: 1.9rem;
+    font-weight: 900;
+    color: var(--vortex-text-white);
+    line-height: 1.1;
+    margin-bottom: 4px;
+}
+.kpi-label {
+    font-size: 0.7rem;
+    color: var(--vortex-text-gray);
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+
+/* ══════════════════════════════════════════════
+   6. SECTION HEADERS  —  عناوين السكشنز
+   ══════════════════════════════════════════════ */
+.vortex-section-title {
+    font-weight: 900;
+    color: var(--vortex-text-white);
+    letter-spacing: 1px;
+}
+.vortex-section-subtitle {
+    color: var(--vortex-text-gray);
+    font-size: 0.95rem;
+}
+
+
+/* ══════════════════════════════════════════════
+   7. TABS  —  التابز والسويتشر
+   ══════════════════════════════════════════════ */
+.vortex-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 1rem 2.5rem;
+    background: var(--vortex-bg-card);
+    border: 2px solid var(--vortex-border);
+    border-radius: var(--vortex-radius);
+    cursor: pointer;
+    transition: border-color 0.25s, transform 0.2s, box-shadow 0.25s;
+    color: var(--vortex-text-gray);
+    min-width: 140px;
+    user-select: none;
+}
+.vortex-tab:hover {
+    border-color: var(--vortex-border-accent);
+    color: var(--vortex-text-white);
+}
+.vortex-tab.active {
+    border-color: var(--vortex-accent);
+    color: var(--vortex-text-white);
+    transform: translateY(-4px);
+    box-shadow: var(--vortex-shadow-glow);
+}
+.vortex-tab-icon { font-size: 1.6rem; line-height: 1; }
+.vortex-tab-label { font-size: 0.85rem; font-weight: 700; letter-spacing: 2px; }
+
+/* Panel toggle */
+.vortex-panel         { display: none; }
+.vortex-panel.show    { display: block; animation: vxFadeIn 0.35s ease; }
+
+/* Pill tabs (للتابز الصغيرة) */
+.vortex-pill {
+    background: transparent;
+    color: var(--vortex-text-gray);
+    border: 1.5px solid var(--vortex-border);
+    border-radius: 20px;
+    padding: 0.4rem 1.1rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    font-family: var(--vortex-font-main);
+    transition: var(--vortex-transition);
+}
+.vortex-pill:hover {
+    border-color: var(--vortex-border-accent);
+    color: var(--vortex-text-white);
+}
+.vortex-pill.active {
+    border-color: var(--vortex-accent);
+    color: var(--vortex-accent);
+    background: rgba(255, 43, 43, 0.08);
+}
+
+
+/* ══════════════════════════════════════════════
+   8. FORMS & INPUTS  —  المدخلات
+   ══════════════════════════════════════════════ */
+.vortex-input {
+    background: var(--vortex-bg-card);
+    border: 2px solid var(--vortex-border);
+    border-radius: var(--vortex-radius-sm);
+    color: var(--vortex-text-white);
+    padding: 0.6rem 1rem;
+    font-family: var(--vortex-font-main);
+    transition: border-color 0.25s;
+    width: 100%;
+}
+.vortex-input:focus {
+    outline: none;
+    border-color: var(--vortex-accent);
+    box-shadow: 0 0 0 3px rgba(255, 43, 43, 0.12);
+}
+.vortex-input::placeholder {
+    color: var(--vortex-text-muted);
+}
+
+.vortex-label {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--vortex-text-gray);
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+    display: block;
+}
+
+/* Range Slider */
+.vortex-range {
+    accent-color: var(--vortex-accent);
+    height: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+/* ══════════════════════════════════════════════
+   9. PROGRESS & CHARTS  —  الأشرطة والمخططات
+   ══════════════════════════════════════════════ */
+
+/* Progress Bar */
+.vortex-progress-track {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 4px;
+    height: 8px;
+    overflow: hidden;
+    flex: 1;
+}
+.vortex-progress-fill {
+    height: 100%;
+    background: var(--vortex-accent);
+    border-radius: 4px;
+    transition: width 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Chart wrapper */
+.vortex-chart-box {
+    position: relative;
+    width: 100%;
+}
+
+/* Legend */
+.vortex-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.78rem;
+    color: var(--vortex-text-gray);
+}
+.vortex-legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+
+/* ══════════════════════════════════════════════
+   10. TESTIMONIALS  —  آراء العملاء
+   ══════════════════════════════════════════════ */
+.vortex-testimonial {
+    background-color: var(--vortex-bg-card);
+    border-left: 4px solid var(--vortex-accent);
+    border-radius: 0 var(--vortex-radius) var(--vortex-radius) 0;
+    padding: 1.5rem;
+}
+.vortex-testimonial-text {
+    font-style: italic;
+    color: var(--vortex-text-gray);
+    line-height: 1.7;
+}
+.vortex-testimonial-author {
+    color: var(--vortex-accent);
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+
+/* ══════════════════════════════════════════════
+   11. HERO SECTION  —  السكشن الرئيسية
+   ══════════════════════════════════════════════ */
+.vortex-hero {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.vortex-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 15, 15, 0.85);
+}
+.vortex-hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ══════════════════════════════════════════════
+   12. DIVIDERS & SEPARATORS
+   ══════════════════════════════════════════════ */
+.vortex-divider {
+    border: none;
+    border-top: 1px solid var(--vortex-border);
+    margin: 2rem 0;
+}
+.vortex-divider-accent {
+    border: none;
+    border-top: 2px solid var(--vortex-accent);
+    width: 60px;
+    margin: 1rem auto;
+}
+
+
+/* ══════════════════════════════════════════════
+   13. ALERTS & NOTIFICATIONS
+   ══════════════════════════════════════════════ */
+.vortex-alert {
+    background: rgba(255, 43, 43, 0.1);
+    border: 1px solid var(--vortex-border-accent);
+    border-radius: var(--vortex-radius-sm);
+    color: var(--vortex-text-white);
+    padding: 0.8rem 1.2rem;
+    font-size: 0.9rem;
+}
+.vortex-alert-success {
+    background: rgba(34, 197, 94, 0.1);
+    border-color: rgba(34, 197, 94, 0.4);
+}
+
+
+/* ══════════════════════════════════════════════
+   14. TABLES
+   ══════════════════════════════════════════════ */
+.vortex-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+.vortex-table th {
+    color: var(--vortex-text-gray);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--vortex-border);
+    text-align: left;
+}
+.vortex-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    color: var(--vortex-text-white);
+}
+.vortex-table tr:hover td {
+    background: rgba(255, 43, 43, 0.04);
+}
+
+
+/* ══════════════════════════════════════════════
+   15. LOADING / SKELETON
+   ══════════════════════════════════════════════ */
+.vortex-skeleton {
+    background: linear-gradient(90deg, #1a1a1a 25%, #222 50%, #1a1a1a 75%);
+    background-size: 200% 100%;
+    animation: vxSkeleton 1.5s infinite;
+    border-radius: var(--vortex-radius-sm);
+}
+@keyframes vxSkeleton {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+
+/* ══════════════════════════════════════════════
+   16. ANIMATIONS  —  الحركات
+   ══════════════════════════════════════════════ */
+@keyframes vxFadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes vxFadeInLeft {
+    from { opacity: 0; transform: translateX(-20px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes vxFadeInRight {
+    from { opacity: 0; transform: translateX(20px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes vxPulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.5; }
+}
+
+.vx-fade-in       { animation: vxFadeIn      0.4s ease both; }
+.vx-fade-in-left  { animation: vxFadeInLeft  0.4s ease both; }
+.vx-fade-in-right { animation: vxFadeInRight 0.4s ease both; }
+.vx-pulse         { animation: vxPulse       2s ease infinite; }
+
+
+/* ══════════════════════════════════════════════
+   17. SCROLLBAR  —  شريط التمرير
+   ══════════════════════════════════════════════ */
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: var(--vortex-bg); }
+::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--vortex-accent); }
+
+
+/* ══════════════════════════════════════════════
+   18. RESPONSIVE HELPERS
+   ══════════════════════════════════════════════ */
+@media (max-width: 768px) {
+    .vortex-tab   { padding: 0.8rem 1.5rem; min-width: 110px; }
+    .kpi-value    { font-size: 1.5rem; }
+    .vortex-hero  { min-height: 60vh; }
+}
