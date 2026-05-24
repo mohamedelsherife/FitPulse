@@ -542,3 +542,38 @@ img {
     .kpi-value    { font-size: 1.5rem; }
     .vortex-hero  { min-height: 60vh; }
 }
+
+#header header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 32px;
+  background: #1a1a1a;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+#header .logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#header header nav {
+  display: flex;
+  gap: 4px;
+}
+
+#header header nav a {
+  color: #aaa;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+#header header nav a:hover,
+#header header nav a.active {
+  color: #ff2b2b;
+  background: rgba(255, 43, 43, 0.1);
+}
