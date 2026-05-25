@@ -577,3 +577,13 @@ img {
   color: #ff2b2b;
   background: rgba(255, 43, 43, 0.1);
 }
+
+#footer footer {
+  text-align: center;
+  padding: 20px;
+  background: #1a1a1a;
+  border-top: 1px solid #2a2a2a;
+  color: #6b6b6b;
+  font-size: 13px;
+  margin-top: auto;
+}
