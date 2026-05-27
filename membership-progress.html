@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership & Progress | Vortex Fitness</title>
+    <!-- Links to the shared stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+    <!-- Person 6 will inject the header here using include.js -->
+    <div id="header"></div>
+
+    <main class="membership-container">
+        <!-- MEMBERSHIP PRICING SECTION -->
+        <section class="pricing-section">
+            <h1 class="vortex-title">Vortex Memberships</h1>
+            <p class="subtitle">Choose your path to greatness.</p>
+            
+            <div class="pricing-table">
+                <!-- Basic Plan -->
+                <div class="pricing-card">
+                    <h2>Basic</h2>
+                    <p class="price">$29<span>/mo</span></p>
+                    <ul>
+                        <li>Access to gym equipment</li>
+                        <li>Locker room access</li>
+                        <li>Free Wi-Fi</li>
+                    </ul>
+                    <button class="select-plan-btn" data-plan="Basic">Select Basic</button>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="pricing-card featured">
+                    <h2>Pro</h2>
+                    <p class="price">$49<span>/mo</span></p>
+                    <ul>
+                        <li>All Basic features</li>
+                        <li>Group classes included</li>
+                        <li>1 Personal training session</li>
+                    </ul>
+                    <button class="select-plan-btn" data-plan="Pro">Select Pro</button>
+                </div>
+
+                <!-- Elite Plan -->
+                <div class="pricing-card">
+                    <h2>Elite</h2>
+                    <p class="price">$79<span>/mo</span></p>
+                    <ul>
+                        <li>All Pro features</li>
+                        <li>Unlimited personal training</li>
+                        <li>Spa & Sauna access</li>
+                    </ul>
+                    <button class="select-plan-btn" data-plan="Elite">Select Elite</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROGRESS TRACKER SECTION -->
+        <section class="progress-section">
+            <h2>Your Vortex Progress</h2>
+            
+            <div class="status-container">
+                <p id="plan-status">Membership: <span class="white-text">None selected</span></p>
+                <p id="rank-status">Vortex Rank: <span id="rank-text" class="rank-badge">Initiate</span></p>
+            </div>
+            
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            
+            <p class="percentage-display"><span id="progress-text">0</span>% Completed</p>
+            <button id="increase-progress-btn">Log Workout</button>
+        </section>
+    </main>
+
+    <!-- Person 6 will inject the footer here using include.js -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="js/include.js"></script>
+    <script src="js/progress.js"></script>
+</body>
+</html>
