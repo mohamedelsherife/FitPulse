@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../css/sign-up-page.css">
+  <title>Sign Up</title>
+</head>
+<body>
+  <div class="signup-box">
+    <h1>Sign Up</h1>
+    <p class="join-us-text">Join us today! It takes only a few steps</p>
+    <p class="profile-section-label">Choose a profile picture</p>
+    <div class="selected-preview" id="selectedPreview">
+      <i class="bi bi-person" style="font-size: 24px; color: #555;"></i>
+    </div>
+    <div class="profile-pic">
+      <div class="circle-option" style="background-color: #2A3A5C;" data-label="WB" onclick="selectAvatar(this)">
+        WB<span class="tick">✓</span>
+      </div>
+      <div class="circle-option" style="background-color: #3D2E52;" data-label="MM" onclick="selectAvatar(this)">
+        MM<span class="tick">✓</span>
+      </div>
+      <div class="circle-option" style="background-color: #1E3A3A;" data-label="KK" onclick="selectAvatar(this)">
+        KK<span class="tick">✓</span>
+      </div>
+      <div class="circle-option" style="background-color: #444441;" data-label="SL" onclick="selectAvatar(this)">
+        SL<span class="tick">✓</span>
+      </div>
+      <div class="circle-option" style="background-color: #7A3B3B;" data-label="AR" onclick="selectAvatar(this)">
+        AR<span class="tick">✓</span>
+      </div>
+    </div>
+    <button class="upload-btn" onclick="document.getElementById('photoUpload').click()">
+      <i class="bi bi-upload"></i> Upload photo
+    </button>
+    <input type="file" id="photoUpload" accept="image/*" style="display: none;">
+    <hr class="divider">
+    <form action="placeholder" method="POST">
+      <p>Username</p>
+      <div class="input-wrapper">
+        <input type="text" name="username" placeholder="Username" required>
+      </div>
+      <p>Password</p>
+      <div class="input-wrapper">
+        <input type="password" name="password" id="passwordInput" placeholder="Password" required>
+        <button type="button" class="toggle-password" onclick="togglePassword()" id="eyeBtn">
+          <i class="bi bi-eye-slash" id="eyeIcon"></i>
+        </button>
+      </div>
+      <button type="submit" class="signup-btn">Sign Up</button>
+    </form>
+    <div class="create-account">
+      <p>Already have an account?</p>
+      <a href="login-page.html">Login</a>
+    </div>
+  </div>
+  <script src="../js/sign-up-page.js"></script>
+</body>
+</html>
