@@ -9,16 +9,26 @@
     <title>Profile page</title>
 </head>
 <body>
+
+    <!-- =============================================
+         HOME BUTTON — update href to your home page URL
+         e.g. href="/index.html" or href="/dashboard"
+         ============================================= -->
+    <a href="/index.html" class="home-btn">
+        <i class="bi bi-arrow-left"></i>
+        <span>Home</span>
+    </a>
+
     <div class="profile-card">
         <div class="left-panel">
             <div class="profile-header">
                 <img src="../asset/image/profile-pic.png" alt="Profile Picture" class="profile-pic">
-                <p>David Tennant</p>
-                <p>Age: 55</p>
+                <p class="profile-name">David Tennant</p>
+                <p class="profile-age">Age: 55</p>
             </div>
             <hr class="divider-1">
             <div class="location-row">
-                <i class="bi bi-geo-alr"></i>
+                <i class="bi bi-geo-alt"></i>
                 <p>Vortex Gym, Central</p>
             </div>
             <div class="Joined-row">
@@ -27,9 +37,9 @@
             </div>
             <hr class="divider-2">
             <div class="membership-card">
-                <h3><span class="status-dot"></span>Membership Details:</h3>
-                <p style="color:aquamarine;"><strong style="color:white;">Membership Type:</strong> Premium</p>
-                <p style="color:grey;"><strong style="color:white;">Expiration Date:</strong> December 31, 2024</p>
+                <h3><span class="status-dot"></span>Membership Details</h3>
+                <p><strong>Type:</strong> <span class="membership-type">Premium</span></p>
+                <p><strong>Expires:</strong> <span class="membership-expiry">December 31, 2024</span></p>
             </div>
             <hr class="divider-1">
             <div class="stats-grid">
@@ -72,23 +82,35 @@
                 </div>
                 <div class="weekly-schedule">
                     <h3>Weekly Schedule</h3>
-                    <p class="workout">Chest & Back</p>
-                    <p class="workout-day">Monday</p>
+                    <div class="schedule-row">
+                        <span class="workout">Chest &amp; Back</span>
+                        <span class="workout-day">Monday</span>
+                    </div>
                     <hr class="schedule-divider">
-                    <p class="workout">Shoulders & Arms</p>
-                    <p class="workout-day">Tuesday</p>
+                    <div class="schedule-row">
+                        <span class="workout">Shoulders &amp; Arms</span>
+                        <span class="workout-day">Tuesday</span>
+                    </div>
                     <hr class="schedule-divider">
-                    <p class="workout">Legs & Core</p>
-                    <p class="workout-day">Wednesday</p>
+                    <div class="schedule-row">
+                        <span class="workout">Legs &amp; Core</span>
+                        <span class="workout-day">Wednesday</span>
+                    </div>
                     <hr class="schedule-divider">
-                    <p class="workout">Anterior</p>
-                    <p class="workout-day">Thursday</p>
+                    <div class="schedule-row">
+                        <span class="workout">Anterior</span>
+                        <span class="workout-day">Thursday</span>
+                    </div>
                     <hr class="schedule-divider">
-                    <p class="workout">Posterior</p>
-                    <p class="workout-day">Friday</p>
+                    <div class="schedule-row">
+                        <span class="workout">Posterior</span>
+                        <span class="workout-day">Friday</span>
+                    </div>
                     <hr class="schedule-divider">
-                    <p class="workout">Cardio & Mobility</p>
-                    <p class="workout-day">Sunday</p>
+                    <div class="schedule-row">
+                        <span class="workout">Cardio &amp; Mobility</span>
+                        <span class="workout-day">Sunday</span>
+                    </div>
                 </div>
             </div>
 
@@ -96,7 +118,7 @@
             <div id="classes-tab" class="tab-content">
                 <div class="class-card">
                     <div class="class-rating">
-                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star-fill"></i>
                         <span>4.8</span>
                     </div>
                     <h3>HIIT Blast</h3>
@@ -109,7 +131,7 @@
                 </div>
                 <div class="class-card">
                     <div class="class-rating">
-                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star-fill"></i>
                         <span>4.5</span>
                     </div>
                     <h3>Yoga Flow</h3>
@@ -122,7 +144,7 @@
                 </div>
                 <div class="class-card">
                     <div class="class-rating">
-                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star-fill"></i>
                         <span>4.9</span>
                     </div>
                     <h3>Strength Training</h3>
@@ -207,7 +229,7 @@
                             </div>
                             <div class="achievment-item">
                                 <span class="achievment-label">5km Run</span>
-                                <span class="achievment-value">- 20 min</span>
+                                <span class="achievment-value">&lt; 20 min</span>
                             </div>
                         </div>
                     </div>
