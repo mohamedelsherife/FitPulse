@@ -56,20 +56,20 @@
 }
 
 body {
-    font-family: var(--vortex-font-main);
-    background-color: var(--vortex-bg);
-    color: var(--vortex-text-white);
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
+    font-family: var(--vortex-font-main) !important;
+    background-color: var(--vortex-bg)!important;
+    color: var(--vortex-text-white)!important;
+    overflow-x: hidden !important;
+    -webkit-font-smoothing: antialiased !important;
 }
 
 a {
-    color: var(--vortex-accent);
+    color: var(--vortex-accent) !important;
     text-decoration: none;
     transition: var(--vortex-transition);
 }
 a:hover {
-    color: var(--vortex-accent-dark);
+    color: var(--vortex-accent-dark) !important;
 }
 
 img {
@@ -84,13 +84,13 @@ img {
 
 /* الألوان */
 .text-vortex        { color: var(--vortex-accent) !important; }
-.text-gray          { color: var(--vortex-text-gray); }
-.text-muted-vortex  { color: var(--vortex-text-muted); }
+.text-gray          { color: var(--vortex-text-gray) !important; }
+.text-muted-vortex  { color: var(--vortex-text-muted) !important; }
 
 /* الخلفيات */
-.bg-vortex          { background-color: var(--vortex-bg); }
-.bg-vortex-dark     { background-color: var(--vortex-bg-dark); }
-.bg-vortex-card     { background-color: var(--vortex-bg-card); }
+.bg-vortex          { background-color: var(--vortex-bg) !important; }
+.bg-vortex-dark     { background-color: var(--vortex-bg-dark) !important; }
+.bg-vortex-card     { background-color: var(--vortex-bg-card) !important; }
 
 /* الخطوط */
 .fw-black           { font-weight: 900; }
@@ -110,48 +110,48 @@ img {
 
 /* زر أحمر مملوء */
 .btn-vortex {
-    background-color: var(--vortex-accent);
-    color: var(--vortex-text-white);
-    border: none;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    transition: var(--vortex-transition);
+    background-color: var(--vortex-accent)!important;
+    color: var(--vortex-text-white)!important;
+    border: none !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+    transition: var(--vortex-transition)!important;
 }
 .btn-vortex:hover,
 .btn-vortex:focus {
-    background-color: var(--vortex-accent-dark);
-    color: var(--vortex-text-white);
+    background-color: var(--vortex-accent-dark)!important;
+    color: var(--vortex-text-white)!important;
     transform: scale(1.05);
-    box-shadow: var(--vortex-shadow-glow);
+    box-shadow: var(--vortex-shadow-glow)!important;
 }
 
 /* زر بإطار أحمر */
 .btn-outline-vortex {
-    color: var(--vortex-accent);
-    border: 2px solid var(--vortex-accent);
+    color: var(--vortex-accent)!important;
+    border: 2px solid var(--vortex-accent)!important;
     background: transparent;
     font-weight: 700;
     letter-spacing: 0.5px;
-    transition: var(--vortex-transition);
+    transition: var(--vortex-transition)!important;
 }
 .btn-outline-vortex:hover,
 .btn-outline-vortex:focus {
-    background-color: var(--vortex-accent);
-    color: var(--vortex-text-white);
-    box-shadow: var(--vortex-shadow-glow);
+    background-color: var(--vortex-accent)!important;
+    color: var(--vortex-text-white)!important;
+    box-shadow: var(--vortex-shadow-glow)!important;
 }
 
 /* زر شفاف */
 .btn-ghost-vortex {
-    color: var(--vortex-text-gray);
-    border: 2px solid var(--vortex-border);
+    color: var(--vortex-text-gray)!important;
+    border: 2px solid var(--vortex-border)!important;
     background: transparent;
     font-weight: 600;
-    transition: var(--vortex-transition);
+    transition: var(--vortex-transition)!important;
 }
 .btn-ghost-vortex:hover {
-    border-color: var(--vortex-border-accent);
-    color: var(--vortex-text-white);
+    border-color: var(--vortex-border-accent)!important;
+    color: var(--vortex-text-white)!important;
 }
 
 
@@ -162,12 +162,12 @@ img {
     background-color: var(--vortex-bg-card);
     border-radius: var(--vortex-radius);
     border-top: 3px solid transparent !important;
-    transition: var(--vortex-transition);
+    transition: var(--vortex-transition)!important;
 }
 .vortex-card:hover {
     transform: translateY(-8px);
     border-top: 3px solid var(--vortex-accent) !important;
-    box-shadow: var(--vortex-shadow-card);
+    box-shadow: var(--vortex-shadow-card)!important;
 }
 
 /* أيقونة الكارد */
@@ -179,14 +179,14 @@ img {
 
 /* بادج الكارد */
 .vortex-badge {
-    display: inline-block;
-    background: rgba(255, 43, 43, 0.15);
-    color: var(--vortex-accent);
-    font-size: 0.68rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    border-radius: var(--vortex-radius-sm);
-    padding: 2px 10px;
+    display: inline-block!important;
+    background: rgba(255, 43, 43, 0.15)!important;
+    color: var(--vortex-accent)!important;
+    font-size: 0.68rem!important;
+    font-weight: 700!important;
+    letter-spacing: 0.5px!important;
+    border-radius: var(--vortex-radius-sm)!important;
+    padding: 2px 10px!important;
 }
 
 /* KPI Card */
@@ -225,13 +225,13 @@ img {
    6. SECTION HEADERS  —  عناوين السكشنز
    ══════════════════════════════════════════════ */
 .vortex-section-title {
-    font-weight: 900;
-    color: var(--vortex-text-white);
-    letter-spacing: 1px;
+    font-weight: 900!important;
+    color: var(--vortex-text-white)!important;
+    letter-spacing: 1px!important;
 }
 .vortex-section-subtitle {
-    color: var(--vortex-text-gray);
-    font-size: 0.95rem;
+    color: var(--vortex-text-gray)!important;
+    font-size: 0.95rem!important;
 }
 
 
@@ -261,7 +261,7 @@ img {
     border-color: var(--vortex-accent);
     color: var(--vortex-text-white);
     transform: translateY(-4px);
-    box-shadow: var(--vortex-shadow-glow);
+    box-shadow: var(--vortex-shadow-glow)!important;
 }
 .vortex-tab-icon { font-size: 1.6rem; line-height: 1; }
 .vortex-tab-label { font-size: 0.85rem; font-weight: 700; letter-spacing: 2px; }
