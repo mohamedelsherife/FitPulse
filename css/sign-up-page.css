@@ -247,3 +247,9 @@ body {
   border-color: rgb(131, 1, 1);
   color: #ffffff;
 }
+
+/*change text color of sign up button */
+form button a{
+  text-decoration: none;
+  color: #ffffff;
+}

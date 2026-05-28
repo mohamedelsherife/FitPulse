@@ -550,6 +550,7 @@ img {
   padding: 14px 32px;
   background: #1a1a1a;
   border-bottom: 1px solid #2a2a2a;
+  z-index: 10000;/* fix profile dropdwon problem in home and workout page*/
 }
 
 #header .logo {
@@ -578,10 +579,6 @@ img {
   background: rgba(255, 43, 43, 0.1);
 }
 
-.bmi_link{
-    padding-right: 6px;
-}
-
 #footer footer {
   text-align: center;
   padding: 20px;
@@ -592,16 +589,38 @@ img {
   margin-top: auto;
 }
 
-.profile-dropdown { position: relative; }
+.profile-dropdown { 
+    position: relative;
+    z-index: 9999; /* fix profile dropdwon problem in home and workout page*/
+ }
 
 .profile-dropdown input { display: none; }
 
 .profile-dropdown label { cursor: pointer; color: white; font-size: 1.2rem; }
 
-.profile-menu { display: none; position: absolute; right: 0; top: 130%; background: #1a1a1a; border: 1px solid #444; border-radius: 6px; overflow: hidden; }
+.profile-menu {
+     display: none; 
+     position: absolute; 
+     right: 0; 
+     top: 130%; 
+     background: #1a1a1a; 
+     border: 1px solid #444; 
+     border-radius: 6px; 
+     overflow: hidden;
+     z-index: 9999;    /* fix profile dropdwon problem in home and workout page*/   
+     pointer-events: auto;  /* fix profile dropdwon problem in home and workout page*/            
+    }
 
 #profileToggle:checked ~ .profile-menu { display: block; }
 
 .profile-menu a { display: block; padding: 10px 20px; color: #ccc; text-decoration: none; }
 
 .profile-menu a:hover { background: #2a2a2a; color: #e53e3e; }
+/*header title */
+header div a{
+    color: #ffffff;
+}
+/*header title */
+header div a:hover{
+    color: #ffffff;
+}

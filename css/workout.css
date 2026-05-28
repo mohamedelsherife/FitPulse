@@ -30,7 +30,8 @@ header {
   position: relative;
   padding: 72px 5vw 56px;
   border-bottom: 1px solid var(--border);
-  overflow: hidden;
+    /* overflow: hidden; */   /* i delete it becuase i have a problem with profile dropdwon */
+  isolation: isolate; /*i add this to fix profile dropdwon problem*/
 }
 
  header::before {
@@ -41,6 +42,7 @@ header {
     radial-gradient(ellipse 60% 80% at 80% 50%, rgba(255,43,43,0.12) 0%, transparent 70%),
     radial-gradient(ellipse 40% 60% at 20% 80%, rgba(255,43,43,0.06) 0%, transparent 70%);
   pointer-events: none;
+    z-index: -1;   /*i because i deleted overflow hidden in header, to fix profile dropdwon problem*/
 } 
 
 .header-label {

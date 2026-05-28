@@ -148,4 +148,9 @@ body {
   color: rgb(173, 0, 0);
   text-decoration: underline;
 }
+/*change text color of login button */
+form button a{
+  text-decoration: none;
+  color: #ffffff;
+}
 
