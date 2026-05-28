@@ -35,9 +35,9 @@ document.getElementById("calcBtn").addEventListener("click", function () {
 
   const tips = {
     underweight: { male: "You are underweight. Increase calorie intake with proteins like eggs and chicken.", female: "You are underweight. Add healthy fats like avocado and nuts to your diet." },
-    normal:      { male: "Great! Stay active 150 min/week and eat a balanced diet.", female: "Great! Stay active 150 min/week and eat a balanced diet." },
-    overweight:  { male: "Try to increase activity and reduce processed foods by 300–500 calories/day.", female: "Try to increase activity and reduce processed foods by 300–500 calories/day." },
-    obese:       { male: "Consult a doctor. Focus on exercise and gradual calorie reduction.", female: "Consult a doctor. Focus on exercise and gradual calorie reduction." }
+    normal:      { male: "Great shape! Maintain your fitness with regular workouts, enough protein, and staying active throughout the week.", female: "Great job! Keep a balanced lifestyle with healthy meals, hydration, and regular physical activity like walking or yoga." },
+    overweight:  { male: "You are slightly overweight. Try reducing sugary drinks and processed foods while increasing cardio and daily movement.", female: "You are slightly overweight. Focus on portion control, healthy snacks, and light exercises such as walking, cycling, or home workouts." },
+    obese:       { male: "Your BMI indicates obesity. Start with gradual lifestyle changes, regular exercise, and consider consulting a healthcare professional.", female: "Your BMI indicates obesity. Focus on sustainable healthy habits, gentle physical activity, and seek medical guidance if needed." }
   };
 
   recDiv.classList.remove("d-none");
