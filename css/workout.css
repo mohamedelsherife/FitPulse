@@ -39,7 +39,7 @@ header {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 60% 80% at 80% 50%, rgba(255,43,43,0.12) 0%, transparent 70%),
+    /* radial-gradient(ellipse 60% 80% at 80% 50%, rgba(255,43,43,0.12) 0%, transparent 70%), i deleted because it make a noise color on the headr */
     radial-gradient(ellipse 40% 60% at 20% 80%, rgba(255,43,43,0.06) 0%, transparent 70%);
   pointer-events: none;
     z-index: -1;   /*i because i deleted overflow hidden in header, to fix profile dropdwon problem*/

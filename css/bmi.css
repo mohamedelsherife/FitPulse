@@ -1,7 +1,7 @@
 body { background-color: #0f0f0f; }
 
 .card {
-  background-color: #1a1a1a;
+  background-color: #161616;
   border: 1px solid #2a2a2a;
   border-radius: 16px;
 }
@@ -20,7 +20,48 @@ body { background-color: #0f0f0f; }
 }
 
 .form-control::placeholder { color: #b3b3b3; }
+/*title*/
+section h1 span{
+  color: #ff2b2b;
+}
 
+div div h6{
+  color: #ff2b2b;
+}
+
+#calcBtn{
+  background-color: #ff2b2b;
+}
+
+#male{
+  background-color: #ff2b2b;
+}
+
+#Result{
+  color: #ff2b2b;
+}
+
+.btn-outline-danger {
+    --bs-btn-color: #ff2b2b;
+    --bs-btn-border-color: #ff2b2b;
+    --bs-btn-hover-bg: #ff2b2b;
+    --bs-btn-hover-border-color: #ff2b2b;
+    --bs-btn-active-bg: #ff2b2b;
+    --bs-btn-active-border-color: #ff2b2b;
+}
+
+/* اللون عند التحديد (checked) */
+#male:checked + label,
+#female:checked + label {
+    background-color: #ff2b2b !important;
+    border-color: #ff2b2b !important;
+    color: white !important;
+}
+
+.text-danger {
+    --bs-danger-rgb: 255, 43, 43;
+    color: #ff2b2b !important;
+}
 /* Result */
 .bmi-number {
   font-size: 5rem;
