@@ -542,6 +542,7 @@ img {
     .kpi-value    { font-size: 1.5rem; }
     .vortex-hero  { min-height: 60vh; }
 }
+/* header of all pages */
 
 #header header {
   display: flex;
@@ -623,4 +624,9 @@ header div a{
 /*header title */
 header div a:hover{
     color: #ffffff;
+}
+
+.profile-dropdown label:hover {
+    color: #ff2b2b !important;
+    background-color: rgba(255, 43, 43, 0.1);
 }

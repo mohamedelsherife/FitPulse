@@ -15,3 +15,4 @@ document.querySelectorAll('.progress-item').forEach(item => {
     const value = parseFloat(percent);
     item.querySelector('.progress-bar-fill').style.width = value + '%';
 });
+
