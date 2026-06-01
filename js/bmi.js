@@ -26,6 +26,9 @@ document.getElementById("calcBtn").addEventListener("click", function () {
   resultDiv.innerHTML = `
     <div class="bmi-number ${cat.cls}">${bmi}</div>
     <div class="bmi-category">${cat.label}</div>
+    <div class="bmi-formula">
+    BMI = ${weight} ÷ (${(height / 100).toFixed(2)})² = <strong>${bmi}</strong>
+    </div>
     <div class="bmi-bar-wrap">
       <div class="bmi-bar ${cat.cls}" id="bmiBar"></div>
     </div>
@@ -42,4 +45,23 @@ document.getElementById("calcBtn").addEventListener("click", function () {
 
   recDiv.classList.remove("d-none");
   recDiv.innerHTML = `<strong class="text-white">Health Tip:</strong> ${tips[cat.cls][gender]}`;
+});
+
+
+document.getElementById('resetBtn').addEventListener('click', () => {
+  // make input from value null
+  document.getElementById('weight').value = '';
+  document.getElementById('height').value = '';
+
+  // make gender in male 
+  document.getElementById('male').checked = true;
+
+  // delete result
+  document.getElementById('bmiResult').innerHTML = 
+    '<p class="text-light">Fill in your details and click Calculate</p>';
+
+  // hide recommendation
+  const rec = document.getElementById('bmiRecommendation');
+  rec.classList.add('d-none');
+  rec.innerHTML = '';
 });

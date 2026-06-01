@@ -90,13 +90,13 @@ The website was developed using **HTML, CSS, JavaScript, Bootstrap, and Chart.js
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/your-repository/VORTEX-GYM.git
+git clone https://github.com/mohamedelsherife/FitPulse.git
 ```
 
 ### 2️⃣ Open the project folder
 
 ```bash
-cd VORTEX-GYM
+cd FitPulse
 ```
 
 ### 3️⃣ Launch the project
