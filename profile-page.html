@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/Profile-page.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script defer src="/js/profile-page.js"></script>
+    <title>Profile page</title>
+</head>
+<body>
+
+    <!-- =============================================
+         HOME BUTTON — update href to your home page URL
+         e.g. href="/index.html" or href="/dashboard"
+         ============================================= -->
+    <a href="/index.html" class="home-btn">
+        <i class="bi bi-arrow-left"></i>
+        <span>Home</span>
+    </a>
+
+    <div class="profile-card">
+        <div class="left-panel">
+            <div class="profile-header">
+                <img src="../asset/image/profile-pic.png" alt="Profile Picture" class="profile-pic">
+                <p class="profile-name">David Tennant</p>
+                <p class="profile-age">Age: 55</p>
+            </div>
+            <hr class="divider-1">
+            <div class="location-row">
+                <i class="bi bi-geo-alt"></i>
+                <p>Vortex Gym, Central</p>
+            </div>
+            <div class="Joined-row">
+                <i class="bi bi-calendar2"></i>
+                <p>Joined: January 2020</p>
+            </div>
+            <hr class="divider-2">
+            <div class="membership-card">
+                <h3><span class="status-dot"></span>Membership Details</h3>
+                <p><strong>Type:</strong> <span class="membership-type">Premium</span></p>
+                <p><strong>Expires:</strong> <span class="membership-expiry">December 31, 2024</span></p>
+            </div>
+            <hr class="divider-1">
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <i class="bi bi-fire"></i>
+                    <span class="stat-number">120</span>
+                    <span class="stat-label">Sessions</span>
+                </div>
+                <div class="stat-box">
+                    <i class="bi bi-trophy"></i>
+                    <span class="stat-number">15</span>
+                    <span class="stat-label">Challenges Won</span>
+                </div>
+                <div class="stat-box">
+                    <i class="bi bi-patch-check"></i>
+                    <span class="stat-label-sm" style="color: Aquamarine;">Pro</span>
+                    <span class="stat-label">Tier</span>
+                </div>
+                <div class="stat-box">
+                    <i class="bi bi-hourglass-split"></i>
+                    <span class="stat-label-sm">5 yrs</span>
+                    <span class="stat-label">Member Since</span>
+                </div>
+            </div>
+        </div>
+        <div class="divider-vertical"></div>
+        <div class="right-panel">
+            <div class="profile-nav-bar">
+                <p class="nav-item active">overview</p>
+                <p class="nav-item">classes</p>
+                <p class="nav-item">progress</p>
+            </div>
+            <hr class="profile-scroll-bar">
+
+            <!-- OVERVIEW TAB -->
+            <div id="overview-tab" class="tab-content active">
+                <div class="about-me">
+                    <h3>About me</h3>
+                    <p>Dedicated to pushing limits and building consistency. I train five days a week with a focus on strength and conditioning. Three years in and still chasing PRs. Platinum member at Vortex Gym — I love the community and the coaching staff here.</p>
+                </div>
+                <div class="weekly-schedule">
+                    <h3>Weekly Schedule</h3>
+                    <div class="schedule-row">
+                        <span class="workout">Chest &amp; Back</span>
+                        <span class="workout-day">Monday</span>
+                    </div>
+                    <hr class="schedule-divider">
+                    <div class="schedule-row">
+                        <span class="workout">Shoulders &amp; Arms</span>
+                        <span class="workout-day">Tuesday</span>
+                    </div>
+                    <hr class="schedule-divider">
+                    <div class="schedule-row">
+                        <span class="workout">Legs &amp; Core</span>
+                        <span class="workout-day">Wednesday</span>
+                    </div>
+                    <hr class="schedule-divider">
+                    <div class="schedule-row">
+                        <span class="workout">Anterior</span>
+                        <span class="workout-day">Thursday</span>
+                    </div>
+                    <hr class="schedule-divider">
+                    <div class="schedule-row">
+                        <span class="workout">Posterior</span>
+                        <span class="workout-day">Friday</span>
+                    </div>
+                    <hr class="schedule-divider">
+                    <div class="schedule-row">
+                        <span class="workout">Cardio &amp; Mobility</span>
+                        <span class="workout-day">Sunday</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CLASSES TAB -->
+            <div id="classes-tab" class="tab-content">
+                <div class="class-card">
+                    <div class="class-rating">
+                        <i class="bi bi-star"></i>
+                        <span>4.8</span>
+                    </div>
+                    <h3>HIIT Blast</h3>
+                    <p>High-intensity interval training to torch calories and boost endurance. Perfect for all fitness levels.</p>
+                    <div class="class-tags">
+                        <span class="class-tag">High-Intensity</span>
+                        <span class="class-tag">Cardio</span>
+                        <span class="class-tag">60 Min</span>
+                    </div>
+                </div>
+                <div class="class-card">
+                    <div class="class-rating">
+                        <i class="bi bi-star"></i>
+                        <span>4.5</span>
+                    </div>
+                    <h3>Yoga Flow</h3>
+                    <p>Find your balance and flexibility through this gentle yet challenging yoga practice.</p>
+                    <div class="class-tags">
+                        <span class="class-tag">Flexibility</span>
+                        <span class="class-tag">Mindfulness</span>
+                        <span class="class-tag">70 Min</span>
+                    </div>
+                </div>
+                <div class="class-card">
+                    <div class="class-rating">
+                        <i class="bi bi-star"></i>
+                        <span>4.9</span>
+                    </div>
+                    <h3>Strength Training</h3>
+                    <p>Build muscle and increase strength with our comprehensive weight training sessions.</p>
+                    <div class="class-tags">
+                        <span class="class-tag">Strength</span>
+                        <span class="class-tag">Muscle Building</span>
+                        <span class="class-tag">50 Min</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROGRESS TAB -->
+            <div id="progress-tab" class="tab-content">
+                <div class="progress-section">
+                    <h3>Fitness Level</h3>
+
+                    <div class="progress-item">
+                        <div class="progress-header">
+                            <span class="progress-label">Strength Training</span>
+                            <span class="progress-percent">75%</span>
+                        </div>
+                        <div class="progress-bar-track">
+                            <div class="progress-bar-fill">
+                                <div class="progress-bar-shimmer"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="progress-item">
+                        <div class="progress-header">
+                            <span class="progress-label">Cardio Endurance</span>
+                            <span class="progress-percent">60%</span>
+                        </div>
+                        <div class="progress-bar-track">
+                            <div class="progress-bar-fill">
+                                <div class="progress-bar-shimmer"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="progress-item">
+                        <div class="progress-header">
+                            <span class="progress-label">Flexibility</span>
+                            <span class="progress-percent">90%</span>
+                        </div>
+                        <div class="progress-bar-track">
+                            <div class="progress-bar-fill">
+                                <div class="progress-bar-shimmer"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="progress-item">
+                        <div class="progress-header">
+                            <span class="progress-label">Nutrition Adherence</span>
+                            <span class="progress-percent">50%</span>
+                        </div>
+                        <div class="progress-bar-track">
+                            <div class="progress-bar-fill">
+                                <div class="progress-bar-shimmer"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="divider-5">
+
+                    <div class="achievments">
+                        <h3>Personal Records</h3>
+                        <div class="achievment-grid">
+                            <div class="achievment-item">
+                                <span class="achievment-label">Bench Press</span>
+                                <span class="achievment-value">150 KG</span>
+                            </div>
+                            <div class="achievment-item">
+                                <span class="achievment-label">Squat</span>
+                                <span class="achievment-value">140 KG</span>
+                            </div>
+                            <div class="achievment-item">
+                                <span class="achievment-label">Deadlift</span>
+                                <span class="achievment-value">200 KG</span>
+                            </div>
+                            <div class="achievment-item">
+                                <span class="achievment-label">5km Run</span>
+                                <span class="achievment-value">&lt; 20 min</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
