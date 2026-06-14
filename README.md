@@ -128,11 +128,11 @@ This project was developed collaboratively as part of a web development team pro
 |------------|-------------|
 | 👨‍💻 Issa Ramy Elsherife | Home Page |
 | 👨‍💻 Ramdan Hussien | Workout Programs |
-| 👨‍💻 Mohamed Ramy Elsherife | BMI Calculator |
+| 👨‍💻 Mohamed Ramy Elsherife | BMI Calculator & layout |
 | 👨‍💻 Yahya Alfitoury | Trainers & Booking |
 | 👨‍💻 Abbe | Membership & Progress Tracking |
-| 👨‍💻 Abdel Hady | Authentication Pages |
-| 👨‍💻 Abdel Hady | User Profile |
+| 👨‍💻 Abdel Hady | Authentication Pages & User Profile |
+| 
 
 ---
 
