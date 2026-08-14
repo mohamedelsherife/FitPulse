@@ -1,4 +1,3 @@
- develop
 # 🏋️‍♂️ VORTEX Gym Website
 
 ## 📖 Overview
